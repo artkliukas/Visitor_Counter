@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: deploy
 on:
   push:
     branches: [ main ]
@@ -6,7 +6,6 @@ on:
 jobs:
   continuous-deployment:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
     steps:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
